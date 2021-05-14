@@ -14,12 +14,21 @@
 .logo {
   height: 3rem;
 }
-
+.body {
+  height: 90vh;
+  backdrop-filter: blur(0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
 .header {
   height: 10vh;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
 }
-
+.headerOffset {
+  height: 10vh;
+}
 .link {
   color: var(--color);
   text-decoration: none;

@@ -1,5 +1,6 @@
 .headerItem {
   display: flex;
+  list-style-type: none;
 }
 .header {
   position: fixed;

@@ -14,14 +14,14 @@ function IndexHeader() {
           alt="VPPR"
         />
       </Link>
-      <div className={styles.headerItem}>
+      <ul className={styles.headerItem}>
         <NavLink to="/login" className="link">
           <h3>Login</h3>
         </NavLink>
         <NavLink to="/register" className="link">
           <h3>Register</h3>
         </NavLink>
-      </div>
+      </ul>
     </nav>
   );
 }

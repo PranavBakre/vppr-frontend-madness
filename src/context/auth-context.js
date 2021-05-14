@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { createContext, useContext, useReducer } from "react";
 
 const AuthContext = createContext();
@@ -41,10 +42,35 @@ function authReducer(state, action) {
 }
 
 export function AuthProvider({ children }) {
-  const [state, dispatch] = useReducer(authReducer, initState);
+  const [authState, dispatch] = useReducer(authReducer, initState);
+
+  const login = useCallback(
+    (token) => {
+      dispatch({
+        type: "LOGIN",
+        payload: token,
+      });
+    },
+    [dispatch]
+  );
+  const logout = useCallback(() => {
+    dispatch({
+      type: "LOGOUT",
+    });
+  }, [dispatch]);
+
+  const fetchUserSelf = useCallback(
+    (user) => {
+      dispatch({
+        type: "FETCH_USER_SELF",
+        payoad: user,
+      });
+    },
+    [dispatch]
+  );
 
   return (
-    <AuthContext.Provider value={{ state, dispatch }}>
+    <AuthContext.Provider value={{ authState, login, logout, fetchUserSelf }}>
       {children}
     </AuthContext.Provider>
   );

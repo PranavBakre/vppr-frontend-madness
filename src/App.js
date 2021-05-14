@@ -1,4 +1,3 @@
-import IndexHeader from "components/Header/IndexHeader";
 import { useAuthContext } from "context/auth-context";
 import { useThemeContext } from "context/theme-context";
 import { useEffect } from "react";

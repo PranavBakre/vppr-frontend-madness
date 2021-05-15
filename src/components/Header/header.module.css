@@ -1,12 +1,33 @@
 .headerItem {
   display: flex;
   list-style-type: none;
+  align-items: center;
+  height: inherit;
 }
+.menuButton {
+  display: none;
+  background: none;
+  color: var(--color);
+  border: none;
+}
+.menuButton:hover {
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  .headerItem {
+    display: none;
+  }
+  .menuButton {
+    display: block;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
   width: 100vw;
-  padding: 10px 60px;
+  padding: 1rem 4rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-sizing: border-box;
@@ -15,4 +36,9 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--lighten);
+}
+@media screen and (max-width: 576px) {
+  .header {
+    padding: 1rem 2rem;
+  }
 }

@@ -1,4 +1,5 @@
 import IndexHeader from "components/Header/IndexHeader";
+import { Route } from "react-router";
 import Login from "./routes/login";
 function Landing() {
   return (
@@ -6,7 +7,7 @@ function Landing() {
       <IndexHeader />
       <div className="headerOffset"></div>
       <div className="body">
-        <Login />
+        <Route path="/login" component={Login} />
       </div>
     </>
   );

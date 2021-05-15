@@ -6,12 +6,12 @@ import Landing from "routes/landing";
 import "./App.css";
 
 function App() {
-  const { dispatch } = useAuthContext();
+  const { refresh } = useAuthContext();
   const { theme } = useThemeContext();
 
   useEffect(() => {
-    dispatch({ type: "REFRESH" });
-  }, [dispatch]);
+    refresh();
+  }, [refresh]);
   return (
     <div className={`app ${theme}`}>
       <Switch>

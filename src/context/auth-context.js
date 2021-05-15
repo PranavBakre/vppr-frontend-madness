@@ -43,7 +43,9 @@ function authReducer(state, action) {
 
 export function AuthProvider({ children }) {
   const [authState, dispatch] = useReducer(authReducer, initState);
-
+  const refresh = useCallback(() => {
+    dispatch({ type: "REFRESH" });
+  }, [dispatch]);
   const login = useCallback(
     (token) => {
       dispatch({
@@ -70,7 +72,9 @@ export function AuthProvider({ children }) {
   );
 
   return (
-    <AuthContext.Provider value={{ authState, login, logout, fetchUserSelf }}>
+    <AuthContext.Provider
+      value={{ authState, login, logout, fetchUserSelf, refresh }}
+    >
       {children}
     </AuthContext.Provider>
   );

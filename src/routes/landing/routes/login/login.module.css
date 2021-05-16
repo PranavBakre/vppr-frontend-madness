@@ -11,9 +11,6 @@
   background: var(--lighten);
 }
 
-@media screen and () {
-}
-
 .formRow {
   width: 80%;
   display: flex;

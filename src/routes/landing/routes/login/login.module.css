@@ -1,0 +1,39 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  min-width: 400px;
+  min-height: 400px;
+  border-radius: 0.5rem;
+  background: var(--lighten);
+}
+
+@media screen and () {
+}
+
+.formRow {
+  width: 80%;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.input {
+  width: 100%;
+  border: none;
+}
+.input:active {
+  outline: none;
+}
+
+.submit {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--color);
+  padding: 0.5rem;
+}
